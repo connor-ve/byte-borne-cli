@@ -1,0 +1,94 @@
+{
+  "upgrades": [
+    {
+      "name": "Reinforced Weapons",
+      "levels": [
+        {"level": 1, "description": "Basic Reinforcement"},
+        {"level": 2, "description": "Sharp Reinforcement"},
+        {"level": 3, "description": "Divine Reinforcement"}
+      ]
+    },
+    {
+      "name": "Soul Magnet",
+      "levels": [
+        {"level": 1, "description": "Small Magnet"},
+        {"level": 2, "description": "Medium Magnet"},
+        {"level": 3, "description": "Large Magnet"}
+      ]
+    },
+    {
+      "name": "Endurance Training",
+      "levels": [
+        {"level": 1, "description": "Novice Training"},
+        {"level": 2, "description": "Warrior Training"},
+        {"level": 3, "description": "Knight Training"}
+      ]
+    },
+    {
+      "name": "Curse Resistance",
+      "levels": [
+        {"level": 1, "description": "Minor Resistance"},
+        {"level": 2, "description": "Moderate Resistance"},
+        {"level": 3, "description": "High Resistance"}
+      ]
+    },
+    {
+      "name": "Dark Artefacts",
+      "levels": [
+        {"level": 1, "description": "Cursed Artefact"},
+        {"level": 2, "description": "Ancient Artefact"},
+        {"level": 3, "description": "Legendary Artefact"}
+      ]
+    }
+  ],
+  "workers": [
+    {
+      "name": "Hollow Gatherers",
+      "levels": [
+        {"level": 1, "description": "Trained Hollow"},
+        {"level": 2, "description": "Veteran Hollow"},
+        {"level": 3, "description": "Elite Hollow"}
+      ]
+    },
+    {
+      "name": "Undead Knights",
+      "levels": [
+        {"level": 1, "description": "Knight-in-Training"},
+        {"level": 2, "description": "Seasoned Knight"},
+        {"level": 3, "description": "Elite Knight"}
+      ]
+    },
+    {
+      "name": "Soul Merchants",
+      "levels": [
+        {"level": 1, "description": "Apprentice Merchant"},
+        {"level": 2, "description": "Experienced Merchant"},
+        {"level": 3, "description": "Master Merchant"}
+      ]
+    },
+    {
+      "name": "Necromancers",
+      "levels": [
+        {"level": 1, "description": "Novice Necromancer"},
+        {"level": 2, "description": "Adept Necromancer"},
+        {"level": 3, "description": "Master Necromancer"}
+      ]
+    },
+    {
+      "name": "Ghostly Wisps",
+      "levels": [
+        {"level": 1, "description": "Faint Wisp"},
+        {"level": 2, "description": "Bright Wisp"},
+        {"level": 3, "description": "Blazing Wisp"}
+      ]
+    },
+    {
+      "name": "Dark Priests",
+      "levels": [
+        {"level": 1, "description": "Junior Priest"},
+        {"level": 2, "description": "Senior Priest"},
+        {"level": 3, "description": "High Priest"}
+      ]
+    }
+  ]
+}
