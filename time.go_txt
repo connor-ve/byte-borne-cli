@@ -1,0 +1,68 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"os"
+	"time"
+)
+
+// TimeData struct to hold the time information
+type TimeData struct {
+	LastRun time.Time `json:"last_run"`
+}
+
+func main() {
+	// File name
+	filename := "time.json"
+
+	// Variable to hold the previous time
+	var previousTime time.Time
+
+	// Check if the file exists
+	if _, err := os.Stat(filename); err == nil {
+		// File exists, read the previous time
+		data, err := ioutil.ReadFile(filename)
+		if err != nil {
+			fmt.Println("Error reading file:", err)
+			return
+		}
+		var timeData TimeData
+		err = json.Unmarshal(data, &timeData)
+		if err != nil {
+			fmt.Println("Error unmarshalling JSON:", err)
+			return
+		}
+		previousTime = timeData.LastRun
+	} else if !os.IsNotExist(err) {
+		// Some other error occurred
+		fmt.Println("Error checking file:", err)
+		return
+	}
+
+	// Get the current time
+	currentTime := time.Now()
+
+	// Print the previous and current times
+	if !previousTime.IsZero() {
+		fmt.Println("Previous time:", previousTime)
+		// Calculate the difference in seconds
+		duration := currentTime.Sub(previousTime)
+		fmt.Printf("Time difference: %.0f seconds\n", duration.Seconds())
+	}
+	fmt.Println("Current time:", currentTime)
+
+	// Store the current time to the file
+	timeData := TimeData{LastRun: currentTime}
+	data, err := json.Marshal(timeData)
+	if err != nil {
+		fmt.Println("Error marshalling JSON:", err)
+		return
+	}
+	err = ioutil.WriteFile(filename, data, 0644)
+	if err != nil {
+		fmt.Println("Error writing file:", err)
+		return
+	}
+}

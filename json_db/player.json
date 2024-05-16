@@ -1,0 +1,31 @@
+{
+  "name": "Godfrey",
+  "health" : 100,
+  "mana" : 0,
+  "xp" : 0.0,
+  "stamina" : 100,
+  "attacks" : [
+    {
+      "type" : "phys",
+      "name" : "throw hands",
+      "damage" : 1,
+      "stamina_drain" : -1,
+      "mana_drain" : 0,
+      "xp" : 0,
+      "level" : 0,
+      "extended_effects" : "bleeding"
+    }
+  ],
+  "defense" : [
+        {
+          "type": "phys",
+          "name": "brace oneself",
+          "damage_reduction": 1,
+          "stamina_drain": -10,
+          "mana_drain": 0,
+          "xp": 0,
+          "level": 0,
+          "effeciency" : 0.9
+        }
+  ]
+}
