@@ -13,6 +13,7 @@ type TimeData struct {
 }
 
 func AfkTime() int64 {
+	var newTime int64 = 0
 	filename := "time.json"
 	var previousTime time.Time
 
@@ -38,9 +39,11 @@ func AfkTime() int64 {
 
 	if !previousTime.IsZero() {
 		duration := currentTime.Sub(previousTime)
-		return int64(duration.Seconds())
+		newTime = int64(duration.Seconds())
+		if newTime >= 10000 {
+			newTime = 10000
+		}
 	}
-	fmt.Println("Current time:", currentTime)
 
 	timeData := TimeData{LastRun: currentTime}
 	data, err := json.Marshal(timeData)
@@ -53,5 +56,5 @@ func AfkTime() int64 {
 		fmt.Println("Error writing file:", err)
 		return 0
 	}
-	return 0
+	return newTime
 }
