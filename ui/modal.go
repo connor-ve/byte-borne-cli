@@ -106,6 +106,8 @@ func (m Model) View() string {
 	boxHeight := (m.height - 7) / 3                // Adjusting for margins and borders
 	bottomTextBoxHeight := 3
 
+
+	
 	topLeftBoxStyle := lipgloss.NewStyle().
 		Border(lipgloss.RoundedBorder()).
 		Height(boxHeight).
