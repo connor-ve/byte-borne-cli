@@ -1,0 +1,64 @@
+items:
+  common: 
+    - name: Small Health Potion
+      type: heal
+      value: 10
+    - name: Health Potion
+      type: heal
+      value: 20
+    - name: Basic Sword
+      type: attack
+      value: 15
+    - name: Wooden Club
+      type: attack
+      value: 10
+  uncommon:
+    - name: Medium Health Potion
+      type: heal
+      value: 40
+    - name: Steel Sword
+      type: attack
+      value: 30
+    - name: Iron Axe
+      type: attack
+      value: 25
+  rare:
+    - name: Large Health Potion
+      type: heal
+      value: 70
+    - name: Enchanted Sword
+      type: attack
+      value: 50
+    - name: War Hammer
+      type: attack
+      value: 45
+  ultra-rare:
+    - name: Ultra Health Potion
+      type: heal
+      value: 100
+    - name: Dragon Slayer
+      type: attack
+      value: 90
+    - name: Magic Staff
+      type: attack
+      value: 80
+  legendary:
+    - name: Legendary Health Potion
+      type: heal
+      value: 150
+    - name: Excalibur
+      type: attack
+      value: 150
+    - name: Phoenix Blade
+      type: attack
+      value: 140
+  unknown:
+    - name: Unknown Potion
+      type: unknown
+      value: 0
+    - name: Mysterious Dagger
+      type: attack
+      value: 50
+    - name: Shadow Bow
+      type: attack
+      value: 60

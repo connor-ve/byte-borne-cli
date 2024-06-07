@@ -1,0 +1,21 @@
+name: "Player"
+time: 0
+level: 0
+experience: 0
+location: "Base"
+mode: "explorer"
+class: "viking"
+attacks:
+  - name: "Smash"
+    damage: 50
+  - name: "Smash Again"
+    damage: 30
+  - name: "Hammer Smash"
+    damage: 70
+items:
+  - name: "Health Potion"
+    quantity: 3
+  - name: "Mana Potion"
+    quantity: 5
+  - name: "Iron Sword"
+    quantity: 1

@@ -1,0 +1,89 @@
+bosses:
+  - name: "The Forgotten King"
+    health: 1000
+    attack_power: 150
+    attacks:
+      - name: "Royal Strike"
+        damage: 50
+      - name: "Ghostly Blade"
+        damage: 60
+  - name: "Forest Guardian"
+    health: 850
+    attack_power: 130
+    attacks:
+      - name: "Nature's Wrath"
+        damage: 40
+      - name: "Root Slam"
+        damage: 50
+      - name: "Leaf Storm"
+        damage: 30
+  - name: "Phantom Lord"
+    health: 900
+    attack_power: 140
+    attacks:
+      - name: "Spectral Slash"
+        damage: 55
+      - name: "Phantom Grasp"
+        damage: 45
+  - name: "Ancient Dragon"
+    health: 1200
+    attack_power: 180
+    attacks:
+      - name: "Fire Breath"
+        damage: 70
+      - name: "Tail Swipe"
+        damage: 60
+      - name: "Dragon Claw"
+        damage: 80
+      - name: "Wing Buffet"
+        damage: 50
+  - name: "The Undying Miner"
+    health: 950
+    attack_power: 135
+    attacks:
+      - name: "Pickaxe Swing"
+        damage: 45
+  - name: "Frost Giant"
+    health: 1050
+    attack_power: 160
+    attacks:
+      - name: "Ice Smash"
+        damage: 60
+      - name: "Frost Breath"
+        damage: 70
+  - name: "Lava Titan"
+    health: 1100
+    attack_power: 170
+    attacks:
+      - name: "Magma Punch"
+        damage: 65
+      - name: "Lava Wave"
+        damage: 75
+      - name: "Seismic Slam"
+        damage: 80
+  - name: "Sand Serpent"
+    health: 900
+    attack_power: 145
+    attacks:
+      - name: "Sandstorm"
+        damage: 50
+      - name: "Venom Bite"
+        damage: 55
+  - name: "Kraken"
+    health: 1150
+    attack_power: 175
+    attacks:
+      - name: "Tentacle Whip"
+        damage: 60
+      - name: "Ink Spray"
+        damage: 50
+      - name: "Ocean Crush"
+        damage: 70
+  - name: "Storm Lord"
+    health: 1000
+    attack_power: 150
+    attacks:
+      - name: "Lightning Strike"
+        damage: 65
+      - name: "Thunder Clap"
+        damage: 55
