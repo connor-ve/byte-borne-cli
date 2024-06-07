@@ -27,3 +27,8 @@ TBD...
 - homebrew
 - winget
 - go
+
+## Ideas for the future
+
+- Json based mod files
+- Moving character sprite in the terminal
