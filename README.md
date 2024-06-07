@@ -32,3 +32,5 @@ TBD...
 
 - Json based mod files
 - Moving character sprite in the terminal
+- Color themes
+- Screen needs stay on constantly
