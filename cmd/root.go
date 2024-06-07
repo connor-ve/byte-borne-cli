@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
 )
 
@@ -36,6 +37,10 @@ var rootCmd = &cobra.Command{
 		if upgrade {
 			fmt.Println("Upgrade flag is set")
 		}
+		if camp {
+			fmt.Println("Camp flag is set")
+			runCamp()
+		}
 	},
 }
 
@@ -53,4 +58,42 @@ func init() {
 	rootCmd.Flags().BoolVarP(&boss, "boss", "b", false, "Open Boss Fight Menu")
 	rootCmd.Flags().BoolVarP(&upgrade, "upgrade", "u", false, "Open Upgrade Menu")
 	rootCmd.Flags().BoolVarP(&camp, "camp", "c", false, "Return your player to camp")
+}
+
+
+// Test Function for running my camp command :)
+func runCamp() {
+	fmt.Println("Running Camp Logic...")
+
+	questions := []*survey.Question{
+		{
+			Name: "action",
+			Prompt: &survey.Select{
+				Message: "What do you want to do at the camp?",
+				Options: []string{"Rest", "Upgrade Equipment", "Plan Strategy", "Leave Camp"},
+				Default: "Rest",
+			},
+		},
+	}
+
+	answers := struct {
+		Action string `survey:"action"`
+	}{}
+
+	err := survey.Ask(questions, &answers)
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}
+
+	switch answers.Action {
+	case "Rest":
+		fmt.Println("You chose to rest at the camp.")
+	case "Upgrade Equipment":
+		fmt.Println("You chose to upgrade your equipment.")
+	case "Plan Strategy":
+		fmt.Println("You chose to plan your strategy.")
+	case "Leave Camp":
+		fmt.Println("You chose to leave the camp.")
+	}
 }
