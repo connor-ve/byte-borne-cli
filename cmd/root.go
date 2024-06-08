@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"os"
+	lib "xcute/dark_terminal/lib"
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
@@ -18,10 +19,16 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "yourapp",
-	Short: "YourApp is a CLI application",
-	Long:  `YourApp is a longer description of your CLI application`,
+	Use:   "bia",
+	Short: "bia is a CLI application",
+	Long:  `bia is a longer description of your CLI application`,
 	Run: func(cmd *cobra.Command, args []string) {
+
+		player, err := lib.ReadPlayerData("C:\\Users\\crvan\\dark_terminal\\database\\player_db.yaml")
+		if err != nil {
+			os.Exit(0)
+		}
+
 		if inventory {
 			fmt.Println("Weapons flag is set")
 		}
@@ -35,7 +42,7 @@ var rootCmd = &cobra.Command{
 			fmt.Println("Boss flag is set")
 		}
 		if upgrade {
-			fmt.Println("Upgrade flag is set")
+			printPlayer(player)
 		}
 		if camp {
 			fmt.Println("Camp flag is set")
@@ -59,7 +66,6 @@ func init() {
 	rootCmd.Flags().BoolVarP(&upgrade, "upgrade", "u", false, "Open Upgrade Menu")
 	rootCmd.Flags().BoolVarP(&camp, "camp", "c", false, "Return your player to camp")
 }
-
 
 // Test Function for running my camp command :)
 func runCamp() {
@@ -96,4 +102,8 @@ func runCamp() {
 	case "Leave Camp":
 		fmt.Println("You chose to leave the camp.")
 	}
+}
+
+func printPlayer(person lib.Player) {
+	fmt.Printf("Player name '%d'\n", person.Experience)
 }
