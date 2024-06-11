@@ -5,6 +5,8 @@ package cmd
 
 import (
 	"fmt"
+	"math/rand"
+	lib "xcute/dark_terminal/lib"
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
@@ -21,6 +23,10 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		bosses, err := lib.ReadBossesData()
+		attacks := len(bosses.Bosses[0].Attacks)
+		selected_attack := rand.Intn(attacks)
+		fmt.Printf("%s uses %s\n", bosses.Bosses[0].Name, bosses.Bosses[0].Attacks[selected_attack].Name)
 
 		questions := []*survey.Question{
 			{
@@ -37,7 +43,7 @@ to quickly create a Cobra application.`,
 			Action string `survey:"Attack"`
 		}{}
 
-		err := survey.Ask(questions, &answers)
+		survey.Ask(questions, &answers)
 		if err != nil {
 			fmt.Println("Error:", err)
 			return
