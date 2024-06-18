@@ -1,4 +1,4 @@
-### Dark-Terminal
+### Dark-Terminal >> _NEW_ ByteBorne: Idle Ascension
 
 Ever got bored at work? and needed a quick break from the day and wanted to play dark souls? Well dont do that... thats a terrible idea. But what if you could run dark souls from your terminal?
 
@@ -30,7 +30,11 @@ TBD...
 
 ## Ideas for the future
 
-- Json based mod files
-- Moving character sprite in the terminal
+- ~~Json based mod files~~
+  - YAML was used for ease of reading
+- ~~Moving character sprite in the terminal~~
+  - Still potentially viable but not for now, maybe puzzles in future
 - Color themes
-- Screen needs stay on constantly
+  - Added to prints for now
+- ~~Screen needs stay on constantly~~
+  - Decided this is no longer needed for the game to have a purpose as it is Idle
