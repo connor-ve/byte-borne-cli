@@ -3,7 +3,7 @@ time: 0
 level: 1
 experience: 100
 location: Base
-mode: explorer
+mode: Explore
 class: viking
 attacks:
 - name: Smash
@@ -14,7 +14,7 @@ attacks:
   damage: 70
 items:
 - name: Health Potion
-  quantity: 8
+  quantity: 17
 - name: Mana Potion
   quantity: 5
 - name: Iron Sword
