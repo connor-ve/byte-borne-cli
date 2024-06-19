@@ -15,13 +15,10 @@ import (
 // statsCmd represents the stats command
 var statsCmd = &cobra.Command{
 	Use:   "stats",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "All of your statistics for static viewing",
+	Long: `
+		Within this command, you will find the ability to retrieve or show all of your statistics regarding your character. 
+			`,
 	Run: func(cmd *cobra.Command, args []string) {
 		player, err := lib.ReadPlayerData("C:\\Users\\crvan\\dark_terminal\\database\\player_db.yaml")
 		if err != nil {
