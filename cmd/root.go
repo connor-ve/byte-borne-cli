@@ -2,8 +2,9 @@ package cmd
 
 import (
 	"fmt"
+	"log"
 	"os"
-	lib "xcute/dark_terminal/lib"
+	"xcute/dark_terminal/lib"
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
@@ -23,10 +24,12 @@ var rootCmd = &cobra.Command{
 	Short: "bia is a CLI application",
 	Long:  `bia is a longer description of your CLI application`,
 	Run: func(cmd *cobra.Command, args []string) {
+		log.Println("Starting rootCmd...")
 
 		player, err := lib.ReadPlayerData("C:\\Users\\crvan\\dark_terminal\\database\\player_db.yaml")
 		if err != nil {
-			os.Exit(0)
+			log.Printf("Error reading player data: %v\n", err)
+			os.Exit(1)
 		}
 
 		if inventory {
@@ -37,6 +40,8 @@ var rootCmd = &cobra.Command{
 		}
 		if mode {
 			fmt.Println("Mode flag is set")
+			timeDiff := lib.GetAfkTime()
+			fmt.Println("AFK Time in seconds:", timeDiff)
 		}
 		if boss {
 			fmt.Println("Boss flag is set")
@@ -48,14 +53,18 @@ var rootCmd = &cobra.Command{
 			fmt.Println("Camp flag is set")
 			runCamp()
 		}
+
+		log.Println("rootCmd completed.")
 	},
 }
 
 func Execute() {
+	log.Println("Executing rootCmd...")
 	if err := rootCmd.Execute(); err != nil {
-		fmt.Println(err)
+		log.Println("Error executing rootCmd:", err)
 		os.Exit(1)
 	}
+	log.Println("rootCmd executed successfully.")
 }
 
 func init() {
@@ -105,5 +114,5 @@ func runCamp() {
 }
 
 func printPlayer(person lib.Player) {
-	fmt.Printf("Player name '%d'\n", person.Experience)
+	fmt.Printf("Player experience: %d\n", person.Experience)
 }
