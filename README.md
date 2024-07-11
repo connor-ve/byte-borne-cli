@@ -66,4 +66,4 @@ TBD...
 
 ### active log of items to complete : 
 - Change name of repo officiaL 
-- START BRANCHING OUT ON IDEAS  
+- START BRANCHING OUT ON IDEAS 
