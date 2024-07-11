@@ -63,3 +63,7 @@ TBD...
   - Added to prints for now
 - ~~Screen needs stay on constantly~~
   - Decided this is no longer needed for the game to have a purpose as it is Idle
+
+### active log of items to complete : 
+- Change name of repo officiaL 
+- START BRANCHING OUT ON IDEAS  
